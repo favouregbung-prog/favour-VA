@@ -1,0 +1,117 @@
+.panel {
+  position: absolute;
+  max-width: var(--panel-width);
+  opacity: 0;
+}
+.panel::before {
+  content: "";
+  position: absolute;
+  inset: var(--panel-pool);
+  z-index: -1;
+  background: radial-gradient(closest-side, var(--shade), var(--shade-none));
+  pointer-events: none;
+}
+.eyebrow {
+  margin-bottom: var(--gap-eyebrow);
+  font-size: var(--size-eyebrow);
+  font-stretch: var(--stretch-ui);
+  letter-spacing: var(--track-eyebrow);
+  text-transform: uppercase;
+  color: var(--accent);
+}
+.title {
+  margin-bottom: var(--gap-heading);
+  font-family: var(--serif);
+  font-size: var(--size-heading);
+  font-weight: var(--w-display);
+  line-height: var(--lh-heading);
+  letter-spacing: var(--track-heading);
+}
+.body {
+  font-size: var(--size-body);
+  line-height: var(--lh-body);
+  color: var(--muted);
+}
+.steps {
+  margin-top: 22px;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 14px;
+}
+.steps li {
+  opacity: var(--on, 0.35);
+  display: grid;
+  gap: 2px;
+}
+.steps b {
+  font-weight: var(--w-bold);
+  font-stretch: var(--stretch-ui);
+  font-size: var(--size-body);
+}
+.steps i {
+  font-family: var(--serif);
+  font-style: italic;
+  font-weight: 500;
+  color: var(--accent);
+  margin-right: 6px;
+}
+.steps span {
+  font-size: 13px;
+  color: var(--muted);
+}
+.sample {
+  margin: 4px 0 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 10px;
+}
+.sample li {
+  display: grid;
+  grid-template-columns: 52px 1fr;
+  gap: 10px;
+  font-size: var(--size-body);
+  line-height: 1.35;
+  color: var(--muted);
+}
+.sample b {
+  font-weight: var(--w-bold);
+  font-variant-numeric: tabular-nums;
+  color: var(--accent);
+}
+.fine {
+  margin-top: 16px;
+  font-size: var(--size-footnote);
+  letter-spacing: 0.04em;
+  color: var(--whisper);
+}
+
+/* the placements */
+.at-inside {
+  right: var(--gutter);
+  bottom: var(--panel-bottom);
+}
+.at-process {
+  left: var(--gutter);
+  bottom: var(--panel-bottom);
+  max-width: var(--panel-width-wide);
+}
+.at-sample {
+  left: var(--gutter);
+  top: var(--panel-key-top);
+}
+
+/* keep last so it wins over the placements */
+@media (max-width: 760px) {
+  .panel {
+    left: var(--gutter);
+    right: var(--gutter);
+    top: auto;
+    bottom: var(--panel-bottom-phone);
+    max-width: none;
+  }
+  .title br {
+    display: none;
+  }
+}

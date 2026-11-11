@@ -1,0 +1,101 @@
+/* Every colour, font and size the page uses. The clock's own colours live in
+   src/lib/clock.ts (materials) and src/lib/textures.ts. */
+:root {
+  /* colour: warm black, ivory, champagne gold */
+  --bg: #070605;
+  --ink: #f2ede4;
+  --ink-hover: #fff;
+  --muted: rgba(242, 237, 228, 0.6);
+  --faint: rgba(242, 237, 228, 0.16);
+  --whisper: rgba(242, 237, 228, 0.56);
+  --accent: #c9a96a;
+  --on-ink: #0b0a08;
+  --ghost-hover: rgba(255, 255, 255, 0.06);
+  --shade: rgba(7, 6, 5, 0.78);
+  --shade-soft: rgba(7, 6, 5, 0.38);
+  --shade-none: rgba(7, 6, 5, 0);
+  --heading-shadow: 0 4px 40px rgba(0, 0, 0, 0.5);
+  --label-halo: 0 0 16px #000, 0 0 8px rgba(0, 0, 0, 0.9), 0 0 2px #000;
+  --leader: linear-gradient(90deg, rgba(201, 169, 106, 0.08), rgba(201, 169, 106, 0.7));
+
+  /* type */
+  --sans: "Instrument Sans", system-ui, sans-serif;
+  --serif: "Newsreader", Georgia, serif;
+  --w-text: 400;
+  --w-medium: 550;
+  --w-bold: 600;
+  --w-display: 450;
+  --stretch-text: 96%;
+  --stretch-ui: 96%;
+  --stretch-nav: 100%;
+
+  --size-display: clamp(46px, 6vw, 100px);
+  --size-heading: clamp(32px, 3.2vw, 52px);
+  --size-lede: clamp(15px, 1.2vw, 18px);
+  --size-closer: clamp(15px, 1.2vw, 19px);
+  --size-brand: 26px;
+  --size-button: 15px;
+  --size-button-small: 13px;
+  --size-body: 15px;
+  --size-nav: 14px;
+  --size-cue: 13px;
+  --size-label: 13px;
+  --size-label-note: 12px;
+  --size-eyebrow: 12px;
+  --size-footnote: 11px;
+
+  --track-display: -0.02em;
+  --track-heading: -0.015em;
+  --track-ui: -0.01em;
+  --track-eyebrow: 0.16em;
+  --lh-display: 0.98;
+  --lh-heading: 1.02;
+  --lh-lede: 1.5;
+  --lh-body: 1.5;
+  --lh-label: 1.25;
+
+  /* space */
+  --gutter: clamp(18px, 4.4vw, 64px);
+  --nav-pad: 20px;
+  --nav-gap: 32px;
+  --hero-top: 21vh;
+  --hero-cta-bottom: 7vh;
+  --panel-bottom: 9vh;
+  --panel-key-top: 16vh;
+  --panel-bottom-phone: 5vh;
+  --panel-width: 380px;
+  --panel-width-wide: 420px;
+  --panel-pool: -60px -90px;
+  --gap-lede: 20px;
+  --gap-heading: 16px;
+  --gap-eyebrow: 16px;
+  --gap-cta: 30px;
+  --gap-buttons: 12px;
+  --footnote-bottom: 22px;
+  --scroll-length: 1100vh;
+  --measure-lede: 27em;
+  --measure-hero: min(46vw, 640px);
+
+  /* controls */
+  --button-h: 46px;
+  --button-pad: 24px;
+  --button-h-small: 34px;
+  --button-pad-small: 16px;
+  --radius-pill: 999px;
+  --lift-hover: -1px;
+
+  /* callouts */
+  --leader-length: 46px;
+  --leader-gap: 12px;
+  --label-inset-right: 58px;
+  --label-gap: 2px;
+
+  /* motion (CSS only; the timelines are in src/lib) */
+  --ease-ui: ease;
+  --t-button: 0.25s;
+  --t-link: 0.2s;
+  --t-nudge: 1.8s;
+  --nudge: 4px;
+
+  --phone: 760px; /* reference only: media queries can't read it */
+}

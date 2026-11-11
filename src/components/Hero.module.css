@@ -1,0 +1,67 @@
+.hero {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: var(--hero-top) var(--gutter) 0;
+  opacity: 0;
+}
+.eyebrow {
+  margin-bottom: var(--gap-eyebrow);
+  font-size: var(--size-eyebrow);
+  font-stretch: var(--stretch-ui);
+  letter-spacing: var(--track-eyebrow);
+  text-transform: uppercase;
+  color: var(--accent);
+}
+.title {
+  font-family: var(--serif);
+  font-size: var(--size-display);
+  font-weight: var(--w-display);
+  line-height: var(--lh-display);
+  letter-spacing: var(--track-display);
+  text-shadow: var(--heading-shadow);
+}
+.lede {
+  max-width: var(--measure-lede);
+  margin-top: var(--gap-lede);
+  font-size: var(--size-lede);
+  line-height: var(--lh-lede);
+  color: var(--muted);
+}
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--gap-buttons);
+  margin-top: var(--gap-cta);
+}
+.cue {
+  position: absolute;
+  left: var(--gutter);
+  bottom: var(--hero-cta-bottom);
+  font-size: var(--size-cue);
+  color: var(--muted);
+}
+.arrow {
+  display: inline-block;
+  animation: nudge var(--t-nudge) ease-in-out infinite;
+}
+@keyframes nudge {
+  50% {
+    transform: translateY(var(--nudge));
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .arrow {
+    animation: none;
+  }
+}
+@media (max-width: 760px) {
+  .hero {
+    padding-top: 13vh;
+  }
+  .lede {
+    max-width: none;
+  }
+}
